@@ -1,0 +1,41 @@
+.create-product-form {
+    margin-left: 160px;
+    margin-bottom: 40px;
+}
+.tax-exempt {
+    display: flex;
+    align-items: center;
+}
+.tax-defaut {
+    margin-right: 20px;
+}
+.input-price {
+    margin-left: 3px;
+    border-radius: 4px;
+    width: 90px;
+    height: 40px;
+    background-color: #252547;
+    border: black;
+    color: white;
+    &:hover {
+        background-color: var(--bgColor);
+        border: 1px solid black;
+    }
+    &:focus {
+        background-color: var(--bgColorBlock);
+        color: white;
+        &:hover {
+            background-color: var(--bgColor);
+            box-shadow: none;
+        }
+    }
+}
+.price-create {
+    display: flex;
+    align-items: center;
+}
+.sale-check {
+    display: flex;
+    margin: 0 10px;
+    align-items: center;
+}

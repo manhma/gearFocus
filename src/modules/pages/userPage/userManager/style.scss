@@ -1,0 +1,103 @@
+.wrapper-filter {
+    width: 100%;
+    height: 82px;
+    background-color: var(--bgColorBlock);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+.filter-item {
+    margin-left: 20px;
+}
+.filter-input {
+    min-width: 180px;
+    background-color: #252547;
+    height: 40px;
+    border: black;
+    color: white;
+    &:hover {
+        background-color: var(--bgColor);
+        border: 1px solid black;
+    }
+    &:focus {
+        background-color: var(--bgColorBlock);
+        color: white;
+        box-shadow: 0 0 0 0.1rem #a16eff;
+        &:hover {
+            background-color: var(--bgColor);
+            box-shadow: none;
+        }
+    }
+}
+
+.arow-show-filter {
+    width: 58px;
+    height: 21px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: var(--bgColorBlock);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.hidden-filter {
+    width: 100%;
+    min-height: 60px;
+    background-color: var(--bgColorBlock);
+    padding: 20px;
+    border-top: 1px solid black;
+    display: flex;
+}
+.hidden-filter-left {
+    width: 50%;
+    padding-right: 80px;
+}
+.hidden-filter-right {
+}
+.hidden-filter-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.label-filter {
+    margin-left: 15px;
+    width: 25%;
+    font-size: 0.9rem;
+}
+.radio-wrapper {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.filter-radio {
+    display: flex;
+}
+.label-filter-right {
+    margin-right: 30px;
+}
+.btn-search {
+    height: 40px;
+    background-color: #a16eff;
+    &:hover {
+        color: #252547;
+    }
+}
+
+//css date range
+.react-daterange-picker {
+    border-radius: 5px;
+    padding-left: 20px;
+}
+.react-daterange-picker__wrapper {
+    border: none;
+}
+.react-daterange-picker__inputGroup__input {
+    color: white;
+}
+.react-daterange-picker__button:enabled {
+    display: none;
+}
+.react-daterange-picker__range-divider {
+    display: none;
+}

@@ -1,0 +1,21 @@
+.table {
+    background-color: var(--bgColorBlock);
+    color: white;
+    border-color: var(--bgColor);
+    margin-bottom: 0;
+}
+
+.tr-table-selected {
+    opacity: 0.5;
+}
+.a-td {
+    color: rgb(49, 49, 236);
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+.email-td {
+    display: flex;
+    flex-direction: column;
+}

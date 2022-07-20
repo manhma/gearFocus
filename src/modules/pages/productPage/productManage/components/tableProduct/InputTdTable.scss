@@ -1,0 +1,14 @@
+.input-edit {
+    width: 90px;
+    display: flex;
+}
+.td-edit {
+    &:hover {
+        cursor: pointer;
+    }
+}
+.td-edit:hover > .input-edit {
+    background-color: #b18aff;
+    padding: 2px 3px;
+    border-radius: 3px;
+}

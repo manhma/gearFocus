@@ -1,0 +1,27 @@
+.home-page {
+    position: relative;
+    flex: 1;
+    background-color: var(--bgColor);
+    padding: 112px 36px 12px;
+    height: 100vh;
+    overflow: auto;
+}
+.add-btn {
+    margin: 20px 0;
+    background-color: #b18aff;
+    &:hover {
+        background-color: #b18aff;
+        color: black;
+    }
+}
+.footer {
+    position: sticky;
+    bottom: 0;
+    background: #323259;
+    padding: 15px 2.25rem;
+    margin-top: 40px;
+    border: 1px solid #1b1b38;
+    border-width: 0 0 1px 1px;
+    box-shadow: 0 0 13px 0 #b18aff;
+    z-index: 2;
+}

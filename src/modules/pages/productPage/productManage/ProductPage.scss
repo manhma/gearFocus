@@ -1,0 +1,29 @@
+.hidden-filter-product-item {
+    display: flex;
+    margin-right: 40px;
+    align-items: center;
+}
+.cha-tooltip {
+    position: relative;
+}
+.tooltip-search-vendor {
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    background-color: white;
+    min-width: 250px;
+    max-width: 350px;
+    max-height: 350px;
+    color: black;
+    border-radius: 3px;
+    overflow: auto;
+}
+.item-vendor {
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(174, 174, 174);
+    }
+}
+.icon-active-product {
+    cursor: pointer;
+}

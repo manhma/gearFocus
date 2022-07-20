@@ -1,0 +1,17 @@
+.pagination {
+    background-color: var(--bgColorBlock);
+    display: flex;
+    align-items: center;
+}
+.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root {
+    color: white;
+}
+.css-1v2lvtn-MuiPaginationItem-root {
+    color: white;
+}
+.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    background-color: #b18aff;
+}
+.pagination-item {
+    margin-left: 10px;
+}
