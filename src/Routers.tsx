@@ -5,7 +5,6 @@ import LoginPage from './modules/auth/pages/loginPage';
 import HomePage from './modules/home/homePage';
 import DefaultLayout from './modules/layouts/DefaultLayout';
 import ProtectedRoute from './modules/layouts/protectedRouter';
-import CreateProductPage from './modules/pages/productPage/createProduct/CreateProductPage';
 import CreateProductPage2 from './modules/pages/productPage/createProduct/CreateProductPage2';
 import ProductDetail from './modules/pages/productPage/detailProduct/ProductDetail';
 import ProductPage from './modules/pages/productPage/productManage/ProductPage';

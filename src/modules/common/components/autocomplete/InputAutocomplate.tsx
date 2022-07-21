@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './InputAutocomplate.scss';
 
 function InputAutocomplate(props: any) {
-    const { data, setValues, paramName, field } = props;
+    const { data, setValues, paramName } = props;
 
     const defaultProps = {
         options: data,
@@ -14,11 +14,11 @@ function InputAutocomplate(props: any) {
         <div>
             <Autocomplete
                 {...defaultProps}
+                disablePortal
                 id="combo-box-demo"
                 options={data}
                 sx={{ width: 300 }}
-                onChange={(e, value: any) => {
-                    console.log('value: ', value);
+                onChange={(e, value) => {
                     setValues((prev: any) => ({ ...prev, [paramName]: value.id }));
                 }}
                 renderInput={(params) => {

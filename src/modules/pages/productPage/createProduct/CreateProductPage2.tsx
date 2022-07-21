@@ -1,8 +1,12 @@
+import { useNavigate } from 'react-router-dom';
+import { RootRouter } from '../../../../configs/router.config';
+import { postRequest } from '../../../../services/apiServices';
 import FormCreateAndDetailProduct from '../components/formCreateAndDetailProduct';
 
 type Props = {};
 
 function CreateProductPage2({}: Props) {
+    const navigate = useNavigate();
     const initFormValue = {
         vendor_id: '',
         name: '',
@@ -31,7 +35,26 @@ function CreateProductPage2({}: Props) {
         inventory_tracking: 0,
         deleted_images: [],
     };
-    return <FormCreateAndDetailProduct title="Product" buttonSubmit="Add Product" initFormValue={initFormValue} />;
+    const onCreateProduct = async (values: any) => {
+        const formData = new FormData();
+        formData.append('productDetail', JSON.stringify(values));
+        const res = await postRequest('apiAdmin/products/create', formData, 'multipart/form-data');
+        console.log('res: ', res);
+        if (res.body.success) {
+            alert('Tạo product thành công');
+            navigate(RootRouter.PRODUCT);
+        } else {
+            alert('Thất bại');
+        }
+    };
+    return (
+        <FormCreateAndDetailProduct
+            title="Product"
+            buttonSubmit="Add Product"
+            initFormValue={initFormValue}
+            onSubmitForm={onCreateProduct}
+        />
+    );
 }
 
 export default CreateProductPage2;

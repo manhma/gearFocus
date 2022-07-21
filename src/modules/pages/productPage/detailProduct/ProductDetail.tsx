@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { RootRouter } from '../../../../configs/router.config';
 import { postRequest } from '../../../../services/apiServices';
 import Loading from '../../../common/components/loading/Loading';
 import FormCreateAndDetailProduct from '../components/formCreateAndDetailProduct';
@@ -8,6 +9,7 @@ type Props = {};
 
 function ProductDetail({}: Props) {
     const location = useLocation();
+    const navigate = useNavigate();
     const productId = location.search.split('=')[1];
 
     const [isLoading, setIsLoading] = useState(true);
@@ -24,6 +26,20 @@ function ProductDetail({}: Props) {
             : '',
         facebook_marketing_enabled: productInfo.facebook_marketing_enabled === '0' ? false : true,
         google_feed_enabled: productInfo.google_feed_enabled === '0' ? false : true,
+        imagesOrder: productInfo.images,
+    };
+
+    const onUpdateProduct = async (values: any) => {
+        const formData = new FormData();
+        formData.append('productDetail', JSON.stringify(values));
+        const res = await postRequest('apiAdmin/products/create', formData, 'multipart/form-data');
+        console.log('res: ', res);
+        if (res.body.success) {
+            alert('Update product thành công');
+            navigate(RootRouter.PRODUCT);
+        } else {
+            alert('Thất bại');
+        }
     };
 
     useEffect(() => {
@@ -42,6 +58,7 @@ function ProductDetail({}: Props) {
             title={productInfo.name}
             buttonSubmit="Update Product"
             initFormValue={initFormValue}
+            onSubmitForm={onUpdateProduct}
         />
     );
 }

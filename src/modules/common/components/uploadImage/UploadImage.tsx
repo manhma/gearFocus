@@ -4,7 +4,9 @@ import React, { useEffect, useState } from 'react';
 import './UploadImage.scss';
 
 const UploadImage = (props: any) => {
-    const { setValues } = props;
+    const { setValues, field } = props;
+
+    console.log('field.images: ', field.value);
     const [selectedImage, setSelectedImage] = useState<any>([]);
     const handleAddImage = (e: any) => {
         if (e.target?.files.length > 0) {
